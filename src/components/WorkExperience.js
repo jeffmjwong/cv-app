@@ -11,9 +11,9 @@ const WorkExperience = () => {
 
   return (
     <div className={mounted ? 'content-cards-container' : ''}>
-      <div className="content-card">
+      <div className="content-card elevation">
         <div className="card-header">
-          <div className="company-logo company-expedia">Exp</div>
+          <div className="company-logo company-expedia">EXP</div>
           <h2>
             <span className="company-name">Tourism Media / Expedia</span>
             <span className="company-period">(August 2019 - Current)</span>
@@ -21,7 +21,7 @@ const WorkExperience = () => {
           </h2>
         </div>
 
-        <div className="card-main elevation">
+        <div className="card-main">
           <p>
             I am currently working full time in Expedia's Brisbane office under Tourism Media's
             employment, funded by the SEO team. I joined the DX team where we are tasked to build
@@ -70,9 +70,9 @@ const WorkExperience = () => {
         </div>
       </div>
 
-      <div className="content-card">
+      <div className="content-card elevation">
         <div className="card-header">
-          <div className="company-logo company-tanda">Ta</div>
+          <div className="company-logo company-tanda">TA</div>
           <h2>
             <span className="company-name">Tanda</span>
             <span className="company-period">(April 2019 - August 2019)</span>
@@ -80,7 +80,7 @@ const WorkExperience = () => {
           </h2>
         </div>
 
-        <div className="card-main elevation">
+        <div className="card-main">
           <p>
             Tanda has the vision to build the greatest product ever. Working at Tanda has extended
             my skills as software developer to solutions architecture, mobile development and
@@ -115,7 +115,7 @@ const WorkExperience = () => {
         </div>
       </div>
 
-      <div className="content-card">
+      <div className="content-card elevation">
         <div className="card-header">
           <div className="company-logo company-netengine">NG</div>
           <h2>
@@ -125,12 +125,12 @@ const WorkExperience = () => {
           </h2>
         </div>
 
-        <div className="card-main elevation">
+        <div className="card-main">
           <p>
             At NetEngine we bring your digital vision to life. With clients ranging from start-ups
             to major corporations, we pride ourselves on our expertise in developing well
-            thought web-based and mobile applications. Mainly a backend developer, I have also
-            involved in numerous frontend work and deployment infrastructure, plus myriad of project
+            thought web-based and mobile applications. Mainly a back-end developer, I have also
+            involved in numerous front-end work and deployment infrastructure, plus myriad of project
             ecosystem processes including project planning, work flows, design, client collaboration
             and testing. During my time at NetEngine, I have vastly extended my knowledge and
             experience not only in programming, but also in some key project management skills.

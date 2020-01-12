@@ -212,11 +212,7 @@
 }
 
 .card-main > p {
-  margin: 0;
-}
-
-.card-main > p:first-child {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 .job-highlights > li {
@@ -249,6 +245,16 @@
 .company-netengine {
   color: #021555;
   background-color: #ff5112;
+}
+
+.company-coderacademy {
+  color: #fff;
+  background-color: #06acb8;
+}
+
+.company-uq {
+  color: #fff;
+  background-color: #6118ba;
 }
 
 @media screen and (max-width: 752px) {

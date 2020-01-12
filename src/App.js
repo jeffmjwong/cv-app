@@ -7,8 +7,7 @@ import NameAndTitle from './components/NameAndTitle';
 import Intro from './components/Intro';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
-import Projects from './components/Projects';
-import Social from './components/Social';
+import About from './components/About';
 
 import './App.css';
 
@@ -58,27 +57,17 @@ const App = () => {
           <span className="vertical-separator">|</span>
 
           <Link
-            className={pathname === '/projects' ? 'active' : ''}
-            to="/projects"
+            className={pathname === '/about' ? 'active' : ''}
+            to="/about"
           >
-            Projects
-          </Link>
-
-          <span className="vertical-separator">|</span>
-
-          <Link
-            className={pathname === '/social' ? 'active' : ''}
-            to="/social"
-          >
-            Social
+            About
           </Link>
         </div>
 
         <Switch>
           <Route exact path="/" component={WorkExperience} />
           <Route path="/education" component={Education} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/social" component={Social} />
+          <Route path="/about" component={About} />
         </Switch>
       </div>
     </div>
