@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const WorkExperience = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+
+    return () => { setMounted(false) };
+  }, [])
+
   return (
-    <>
+    <div className={mounted ? 'content-cards-container' : ''}>
       <div className="content-card">
         <div className="card-header">
           <div className="company-logo company-expedia">Exp</div>
           <h2>
             <span className="company-name">Tourism Media / Expedia</span>
             <span className="company-period">(August 2019 - Current)</span>
-            <span className="company-title">Softare Engineer</span>
+            <span className="company-title">Software Engineer</span>
           </h2>
         </div>
 
@@ -68,7 +76,7 @@ const WorkExperience = () => {
           <h2>
             <span className="company-name">Tanda</span>
             <span className="company-period">(April 2019 - August 2019)</span>
-            <span className="company-title">Softare Engineer</span>
+            <span className="company-title">Software Engineer</span>
           </h2>
         </div>
 
@@ -113,7 +121,7 @@ const WorkExperience = () => {
           <h2>
             <span className="company-name">NetEngine</span>
             <span className="company-period">(June 2018 - April 2019)</span>
-            <span className="company-title">Softare Developer</span>
+            <span className="company-title">Software Developer</span>
           </h2>
         </div>
 
@@ -156,7 +164,7 @@ const WorkExperience = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

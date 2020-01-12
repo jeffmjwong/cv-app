@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link, useLocation } from 'react-router-dom';
 
 import Icons from './components/Icons';
 import Photo from './components/Photo';
@@ -12,7 +12,10 @@ import Social from './components/Social';
 
 import './App.css';
 
-function App() {
+const App = () => {
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
     <div className="App">
       <div className="header-container elevation">
@@ -36,23 +39,47 @@ function App() {
 
       <div className="main-container">
         <div className="navbar-container">
-          <Link to="/">Work Experience</Link>
+          <Link
+            className={pathname === '/' ? 'active' : ''}
+            to="/"
+          >
+            Work Experience
+          </Link>
+
           <span className="vertical-separator">|</span>
-          <Link to="/education">Education</Link>
+
+          <Link
+            className={pathname === '/education' ? 'active' : ''}
+            to="/education"
+          >
+            Education
+          </Link>
+
           <span className="vertical-separator">|</span>
-          <Link to="/projects">Projects</Link>
+
+          <Link
+            className={pathname === '/projects' ? 'active' : ''}
+            to="/projects"
+          >
+            Projects
+          </Link>
+
           <span className="vertical-separator">|</span>
-          <Link to="/social">Social</Link>
+
+          <Link
+            className={pathname === '/social' ? 'active' : ''}
+            to="/social"
+          >
+            Social
+          </Link>
         </div>
 
-        <div className="content-cards-container">
-          <Switch>
-            <Route exact path="/" component={WorkExperience} />
-            <Route path="/education" component={Education} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/social" component={Social} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={WorkExperience} />
+          <Route path="/education" component={Education} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/social" component={Social} />
+        </Switch>
       </div>
     </div>
   );
