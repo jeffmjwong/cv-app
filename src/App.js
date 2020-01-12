@@ -15,19 +15,21 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="header-container">
-        <div className="icons-bar-container">
-          <Icons />
-        </div>
-
-        <div className="profile-container">
-          <div className="profile-left-section-container">
-            <Photo />
-            <NameAndTitle />
+      <div className="header-container elevation">
+        <div className="header">
+          <div className="icons-bar-container">
+            <Icons />
           </div>
 
-          <div className="profile-right-section-container">
-            <Intro />
+          <div className="profile-container">
+            <div className="profile-left-section-container">
+              <Photo />
+              <NameAndTitle />
+            </div>
+
+            <div className="profile-right-section-container">
+              <Intro />
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +45,7 @@ function App() {
           <Link to="/social">Social</Link>
         </div>
 
-        <div>
+        <div className="content-cards-container">
           <Switch>
             <Route exact path="/" component={WorkExperience} />
             <Route path="/education" component={Education} />

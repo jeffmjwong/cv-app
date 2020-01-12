@@ -2,10 +2,10 @@ import React from 'react';
 
 const NameAndTitle = () => {
   return (
-    <div className="name-and-title-container">
-      <p className="name">Jeff Wong</p>
-      <p className="title">Software Engineer</p>
-    </div>
+    <h1 className="name-and-title-container">
+      <span className="name">Jeff Wong</span>
+      <span className="title">Software Engineer</span>
+    </h1>
   );
 };
 
